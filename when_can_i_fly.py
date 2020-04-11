@@ -29,8 +29,8 @@ location_array = []
 
 #Email stuff
 port = 465  # For SSL
-password = "MarioBaseball2572"
-sender_email = "oalex7346@gmail.com"
+password = "<removed>"
+sender_email = "<removed>"
 # Create a secure SSL context
 context = ssl.create_default_context()
 
@@ -96,7 +96,7 @@ def weather_forecast():
             windspeed_high = int(location_array[i]['windspeed_high'].get())
             wind_direction_low = int(location_array[i]['wind_direction_low'].get())
             wind_direction_high = int(location_array[i]['wind_direction_high'].get())
-            r = requests.get('http://api.openweathermap.org/data/2.5/forecast?zip=' + zipcode + ',us&appid=ca4adee6d661b5bfd3ae048f856b07d0&units=imperial')
+            r = requests.get('http://api.openweathermap.org/data/2.5/forecast?zip=' + zipcode + ',us&appid=<removed>&units=imperial')
             json_object = r.json()
             location_info_json = json_object['city']
             forecast_array = json_object['list']
